@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>消息</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" type="text/css" href="../sui/sm.min.css"/>
+		<style type="text/css">
+			#btnTitle{
+				width: 40%;
+				margin: 0 auto;
+			}
+			#msg-page,#ab-page,#dt-page{
+				transform: none !important;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page-group">
+			<!--消息页面-->
+			<div class="page page-current" id="msg-page">
+				<!--导航栏-->
+				<header class="bar bar-nav">
+					<a href="" class="icon icon-me pull-left"></a>
+					<button class="button pull-right  button-link button-nav" style="font-size: 35px; line-height: 42px;">+</button>
+					<div class="buttons-row" id="btnTitle">
+						<a href="" class="tab-link button active">消息</a>
+						<a href="" class="tab-link button">电话</a>
+					</div>
+				</header>	
+				<!--工具栏-->
+				<nav class="bar bar-tab">
+					<a href="#" class="tab-item active">
+						<span class="icon icon-message"></span>
+						<span class="tab-label">消息</span>
+						<span class="badge">99</span>
+					</a>
+					<a href="#ab-page" class="tab-item">
+						<span class="icon icon-friends"></span>
+						<span class="tab-label">联系人</span>
+					</a>
+					<a href="#dt-page" class="tab-item">
+						<span class="icon icon-star"></span>
+						<span class="tab-label">动态</span>
+					</a>
+				</nav>
+				<!--内容区-->
+				<div class="content">
+					<div class="content-block">
+						这里是好友列表
+					</div>
+					
+				</div>
+			</div>
+			<!--联系人页面-->
+			<div class="page" id="ab-page">
+				<!--导航栏-->
+				<header class="bar bar-nav">
+					<a href="" class="icon icon-me pull-left"></a>
+					<button class="button pull-right button-link button-nav">添加</button>
+					<h1 class="title">
+						联系人
+					</h1>
+				</header>
+				<!--工具栏-->
+				<nav class="bar bar-tab">
+					<a href="#msg-page" class="tab-item">
+						<span class="icon icon-message"></span>
+						<span class="tab-label">消息</span>
+					</a>
+					<a href="#" class="tab-item active">
+						<span class="icon icon-friends"></span>
+						<span class="tab-label">联系人</span>
+					</a>
+					<a href="#dt-page" class="tab-item">
+						<span class="icon icon-star"></span>
+						<span class="tab-label">动态</span>
+					</a>
+				</nav>
+				<!--内容区-->
+				<div class="content">
+					<div class="content-block">
+						这里是联系人页面
+					</div>
+					
+				</div>
+			</div>
+			<!--动态页面-->
+			<div class="page" id="dt-page">
+				<!--导航栏-->
+				<header class="bar bar-nav">
+					<a href="" class="icon icon-me pull-left"></a>
+					<button class="button pull-right  button-link button-nav" style="line-height: 42px;">更多</button>
+					<h1 class="title">
+						动态
+					</h1>
+				</header>
+				<!--工具栏-->
+				<nav class="bar bar-tab">
+					<a href="#msg-page" class="tab-item">
+						<span class="icon icon-message"></span>
+						<span class="tab-label">消息</span>
+					</a>
+					<a href="#ab-page" class="tab-item">
+						<span class="icon icon-friends"></span>
+						<span class="tab-label">联系人</span>
+					</a>
+					<a href="#" class="tab-item active">
+						<span class="icon icon-star"></span>
+						<span class="tab-label">动态</span>
+					</a>
+				</nav>
+				<!--内容区-->
+				<div class="content">
+					<div class="content-block">
+						这里是动态页面
+					</div>
+					
+				</div>
+			</div>
+			<div class="panel panel-left" id="info-panel">
+				<div class="content-block">
+					<p>这是侧边栏</p>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../sui/zepto.min.js" ></script>
+	<script type="text/javascript" src="../sui/sm.min.js" ></script>
+	<script>
+	
+		$(document).on("pageInit","#msg-page",function(e,pageID,$page) {
+			document.title ="消息";
+		});
+		$(document).on("pageInit","#ab-page",function(e,pageID,$page) {
+			document.title ="联系人";
+		});
+		$(document).on("pageInit","#dt-page",function(e,pageID,$page) {
+			document.title ="动态";
+		});
+		//初始化SUI
+		$.init();
+	</script>
+</html>
